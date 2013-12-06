@@ -7,12 +7,13 @@
   text-align: center;
   font-family: 'Oleo Script Swash Caps', cursive;
   color: #000;
-  font-size: 80px;
+  font-size: 140px;
   text-decoration: none;
   position: relative;
+  left: -4%;
 }
 #logo a i {
-  left: 240px;
+  right: 272px;
   top: 28px;
   position: absolute;
 }
