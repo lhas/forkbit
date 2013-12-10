@@ -9,6 +9,7 @@
 
   <!-- Google Fonts -->
   <link href='http://fonts.googleapis.com/css?family=Oleo+Script+Swash+Caps' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Rokkitt:400,700' rel='stylesheet' type='text/css'>
 
   <!-- Font-Awesome -->
   <link rel="stylesheet" href="bower/font-awesome/css/font-awesome.min.css">
@@ -28,13 +29,14 @@
   <![endif]-->
 </head>
 <body>
-  <div class="container">
-    
-    <header>
 
-      <h1 id="logo" class="col-md-12">
+  <header itemscope itemtype="http://schema.org/Organization">
 
-        <a href="index.html">
+    <div class="container">
+
+      <h1 id="logo" itemprop="logo" class="col-md-12">
+
+        <a itemprop="url" href="index.html">
           forkbit
 
           <i class="fa fa-code-fork"></i>
@@ -42,8 +44,33 @@
 
       </h1> <!-- #logo -->
 
-    </header>
+    </div> <!-- .container -->
 
-  </div> <!-- .container -->
+  </header>
+
+  <section id="posts">
+    
+      <article id="post-2" class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+        <meta itemprop="url" content="http://blog.popupdesign.com.br/schema.org-dando-significado-ao-conteudo-na-internet" />
+
+        <meta itemprop="keywords" content="schema.org, SEO, microdata" />
+        
+        <div class="container">
+
+          <h1 class="title" itemprop="headline">Schema.org – Dando significado ao conteúdo na internet</h1>
+
+          <h1 class="text-center meta">
+            <small>Em 26 de Dezembro de 2013</small>
+          </h1>
+
+          <p class="excerpt" itemprop="articleBody">Sintaxe, semântica e vocabulário. Parece até aula de português, mas é desenvolvimento web! Neste artigo vamos analisar como todos estes conceitos podem te ajudar a melhor o ranqueamento em mecanismos de busca, facilitar a vida do seu usuário e dar significado ao seu conteúdo na internet. Conheça o schema.org.</p>
+
+        </div> <!-- .container -->
+
+      </article> <!-- .post -->
+
+  </section> <!-- #posts -->
+
 </body>
 </html>
