@@ -33,3 +33,5 @@ end
 gem 'mongoid', git: 'https://github.com/mongoid/mongoid.git'
 
 gem 'rails-i18n', '~> 4.0.0'
+
+ruby '2.0.0'
