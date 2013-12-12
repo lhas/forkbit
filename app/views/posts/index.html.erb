@@ -14,7 +14,7 @@
           <h1 class="title" itemprop="headline"><%= post.title %></h1>
 
           <h1 class="text-center meta">
-            <small>Em 26 de Dezembro de 2013</small>
+            <small>Em <%= l post.updated_at, format: '%d de %B de %Y' %></small>
           </h1>
 
           <p class="excerpt" itemprop="articleBody">

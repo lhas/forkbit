@@ -14,6 +14,8 @@ Bundler.require(:default, Rails.env)
 module Forkbit
   class Application < Rails::Application
 
+    config.i18n.default_locale = 'pt-BR'
+
     config.assets.paths << Rails.root.join('vendor', 'assets', 'bower_components')
     
   end

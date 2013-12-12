@@ -31,3 +31,5 @@ group :doc do
 end
 
 gem 'mongoid', git: 'https://github.com/mongoid/mongoid.git'
+
+gem 'rails-i18n', '~> 4.0.0'
