@@ -1,29 +1,31 @@
-<h1>Listing posts</h1>
+<section id="posts">
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Content</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+  <% @posts.each do |post| %>
+    <article id="post-<%= post.id %>" class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <tbody>
-    <% @posts.each do |post| %>
-      <tr>
-        <td><%= post.title %></td>
-        <td><%= post.content %></td>
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+      <!-- <meta itemprop="url" content="http://blog.popupdesign.com.br/schema.org-dando-significado-ao-conteudo-na-internet" />
 
-<br>
+      <meta itemprop="keywords" content="schema.org, SEO, microdata" /> -->
+      
+      <div class="container">
 
-<%= link_to 'New Post', new_post_path %>
+        <a href="<%= post_path(post) %>">
+
+          <h1 class="title" itemprop="headline"><%= post.title %></h1>
+
+          <h1 class="text-center meta">
+            <small>Em 26 de Dezembro de 2013</small>
+          </h1>
+
+          <p class="excerpt" itemprop="articleBody">
+            <%= post.content %>
+          </p>
+
+        </a>
+
+      </div> <!-- .container -->
+
+    </article> <!-- .post -->
+  <% end %>
+
+</section> <!-- #posts -->
